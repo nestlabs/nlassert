@@ -59,10 +59,10 @@ There are numerous avenues for nlassert support:
 
 # Versioning
 
-nlunit-test follows the [Semantic Versioning guidelines](http://semver.org/) 
+nlassert follows the [Semantic Versioning guidelines](http://semver.org/) 
 for release cycle transparency and to maintain backwards compatibility.
 
 # License
 
-nlunit-test is released under the [Apache License, Version 2.0 license](https://opensource.org/licenses/Apache-2.0). 
+nlassert is released under the [Apache License, Version 2.0 license](https://opensource.org/licenses/Apache-2.0). 
 See the `LICENSE` file for more information.
