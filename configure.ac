@@ -33,14 +33,14 @@ AC_PREREQ([2.68])
 #
 AC_INIT([NLASSERT],
         m4_esyscmd([third_party/nlbuild-autotools/repo/scripts/mkversion -b `cat .default-version` .]),
-        [developer@nest.com],
+        [nlassert-users@google.com],
         [nlassert],
-        [https://developer.nest.com/])
+        [https://github.com/nestlabs/nlassert/])
 
 # Tell the rest of the build system the absolute path where the
 # nlbuild-autotools repository is rooted at.
 
-AC_SUBST(nlbuild_autotools_stem,[third_party/nlbuild-autotools/repo/])
+AC_SUBST(nlbuild_autotools_stem,[third_party/nlbuild-autotools/repo])
 AC_SUBST(abs_top_nlbuild_autotools_dir,[\${abs_top_srcdir}/\${nlbuild_autotools_stem}])
 
 #
