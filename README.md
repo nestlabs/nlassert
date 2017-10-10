@@ -1,3 +1,5 @@
+[![Build Status][nlassert-travis-svg]][nlassert-travis]
+
 Nest Labs Assert
 ================
 
@@ -47,6 +49,9 @@ below and are described in detail in the following sections.
 The compile-time modality interfaces in this package are simpler and
 come in a single family with a couple of styles and variants, all
 intended to provide parallelism with the run-time interfaces.
+
+[nlassert-travis]: https://travis-ci.org/nestlabs/nlassert
+[nlassert-travis-svg]: https://travis-ci.org/nestlabs/nlassert.svg?branch=master
 
 # Interact
 
