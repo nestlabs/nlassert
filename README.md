@@ -1,4 +1,5 @@
 [![Build Status][nlassert-travis-svg]][nlassert-travis]
+[![Coverage Status][nlassert-codecov-svg]][nlassert-codecov]
 
 Nest Labs Assert
 ================
@@ -52,6 +53,8 @@ intended to provide parallelism with the run-time interfaces.
 
 [nlassert-travis]: https://travis-ci.org/nestlabs/nlassert
 [nlassert-travis-svg]: https://travis-ci.org/nestlabs/nlassert.svg?branch=master
+[nlassert-codecov]: https://codecov.io/gh/nestlabs/nlassert
+[nlassert-codecov-svg]: https://codecov.io/gh/nestlabs/nlassert/branch/master/graph/badge.svg
 
 # Interact
 
