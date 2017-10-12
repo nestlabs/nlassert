@@ -17,8 +17,8 @@
 #
 #    Description:
 #      This file is the Travis CI hosted, distributed continuous 
-#      integration configuration file Nest Labs runtime assertion 
-#      library.
+#      integration configuration file for the Nest Labs runtime
+#      assertion library.
 #
 
 language: c
