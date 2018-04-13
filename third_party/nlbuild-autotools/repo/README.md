@@ -67,7 +67,13 @@ following POSIX-based build host systems:
 
 ### Build and Install {#Build_and_Install}
 
-Simply invoke `make tools` at the top-level of your nlbuild-autotools tree.
+Simply invoke `make tools` at the top-level of your nlbuild-autotools
+tree or, for example, from your package or project in which you have
+integrated nlbuild-autotools:
+
+```
+make -C third_party/nlbuild-autotools/repo tools
+```
 
 ### Download and Expand
 
@@ -213,7 +219,7 @@ them.
 
 The format of 'repos.conf' precisely follows that used by git
 submodules. More information is available in 'Makefile-bootstrap' or
-with 'man gitmodules' or 'git help gitmodules'.
+with `man gitmodules` or `git help gitmodules`.
 
 # FAQ {#FAQ}
 

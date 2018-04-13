@@ -31,8 +31,13 @@ GREP                             ?= grep
 GZIP                             ?= gzip
 MKDIR                            ?= mkdir
 MV                               ?= mv
-RM                               ?= rm
-RM                               ?= rm
+
+RMFLAGS                           = -f
+ifeq ($(V),1)
+RMFLAGS                          += -v
+endif
+RM                               ?= rm $(RMFLAGS)
+
 RMDIR                            ?= rmdir
 SED                              ?= sed
 SORT                             ?= sort
