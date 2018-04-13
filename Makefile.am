@@ -1,5 +1,5 @@
 #
-#    Copyright 2015-2016 Nest Labs Inc. All Rights Reserved.
+#    Copyright 2015-2018 Nest Labs Inc. All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License");
 #    you may not use this file except in compliance with the License.
@@ -35,11 +35,13 @@ EXTRA_DIST                                = \
     CHANGES                                 \
     CONTRIBUTING.md                         \
     LICENSE                                 \
+    Makefile-bootstrap                      \
     README.md                               \
     .default-version                        \
     bootstrap                               \
     bootstrap-configure                     \
     $(srcdir)/third_party/nlbuild-autotools \
+    repos.conf                              \
     $(NULL)
 
 BUILT_SOURCES                             = \
