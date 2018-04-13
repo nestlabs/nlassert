@@ -1,5 +1,5 @@
 #
-#    Copyright 2015-2017 Nest Labs Inc. All Rights Reserved.
+#    Copyright 2015-2018 Nest Labs Inc. All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License");
 #    you may not use this file except in compliance with the License.
@@ -24,21 +24,16 @@ include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 
 # Always package (e.g. for 'make dist') these subdirectories.
 
-DIST_SUBDIRS             = \
-    nlunit-test/repo       \
+DIST_SUBDIRS                      = \
     $(NULL)
 
 # Always build (e.g. for 'make all') these subdirectories.
+#
+# The value of NLUNIT_TEST_SUBDIRS will be populated by configure if
+# --with-nlunit_test=internal
 
-SUBDIRS                  = \
+SUBDIRS                           = \
+    $(NLUNIT_TEST_SUBDIRS)          \
     $(NULL)
-
-# Only build (e.g. for 'make all') these subdirectories when requested.
-
-if NLASSERT_WITH_NLUNIT_TEST_INTERNAL
-SUBDIRS                 += \
-    nlunit-test/repo       \
-    $(NULL)
-endif # NLASSERT_WITH_NLUNIT_TEST_INTERNAL
 
 include $(abs_top_nlbuild_autotools_dir)/automake/post.am
