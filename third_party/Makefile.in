@@ -680,6 +680,14 @@ uninstall-am:
 
 include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 
+# NLUNIT_TEST_SUBDIRS is not a permanent part of DIST_SUBDIRS since we do not
+# ever want to include it in a distribution archive; however, when it's been
+# pulled as a 'repo' module, we do want to remove it on invocation of the
+# 'distclean' target. Consequently, we conditionally include it in DIST_SUBDIRS
+# on invocation of 'distclean-recursive'
+
+distclean-recursive: DIST_SUBDIRS += $(NLUNIT_TEST_SUBDIRS)
+
 include $(abs_top_nlbuild_autotools_dir)/automake/post.am
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
