@@ -27,6 +27,8 @@ include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 DIST_SUBDIRS                      = \
     $(NULL)
 
+distclean-recursive: DIST_SUBDIRS += $(NLUNIT_TEST_SUBDIRS)
+
 # Always build (e.g. for 'make all') these subdirectories.
 #
 # The value of NLUNIT_TEST_SUBDIRS will be populated by configure if
