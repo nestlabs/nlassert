@@ -27,6 +27,12 @@ include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 DIST_SUBDIRS                      = \
     $(NULL)
 
+# NLUNIT_TEST_SUBDIRS is not a permanent part of DIST_SUBDIRS since we do not
+# ever want to include it in a distribution archive; however, when it's been
+# pulled as a 'repo' module, we do want to remove it on invocation of the
+# 'distclean' target. Consequently, we conditionally include it in DIST_SUBDIRS
+# on invocation of 'distclean-recursive'
+
 distclean-recursive: DIST_SUBDIRS += $(NLUNIT_TEST_SUBDIRS)
 
 # Always build (e.g. for 'make all') these subdirectories.
