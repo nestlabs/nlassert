@@ -331,8 +331,9 @@ if test "${nl_with_nlunit_test}" = "internal"; then
     maybe_nlunit_test_dirstem="nlunit-test/repo"
     nlunit_test_dirstem="third_party/${maybe_nlunit_test_dirstem}"
 
-    AC_MSG_NOTICE([attempting to create internal ${nlunit_test_dirstem}]) 
-    ${MAKE-make} --no-print-directory -C ${ac_confdir} -f Makefile-bootstrap ${nlunit_test_dirstem}
+    AC_MSG_NOTICE([attempting to create internal ${nlunit_test_dirstem}])
+
+    ${MAKE-make} --no-print-directory -C ${srcdir} -f Makefile-bootstrap ${nlunit_test_dirstem}
 
     if test $? -ne 0; then
         AC_MSG_ERROR([failed to create ${nlunit_test_dirstem}. Please check your network connection or the correctness of 'repos.conf'])
