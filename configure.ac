@@ -323,7 +323,7 @@ if test "${nl_cv_build_tests}" = "yes"; then
 fi
 
 # Depending on whether nlunit-test has been configured for an internal
-# location, it's directory stem within this package needs to be set
+# location, its directory stem within this package needs to be set
 # accordingly. In addition, if the location is internal, then we need
 # to attempt to pull it down using the bootstrap makefile.
 
@@ -393,7 +393,9 @@ NL_RESTORE_WERROR
 
 # Configure any autotools-based subdirectories
 
-AC_CONFIG_SUBDIRS([third_party/nlunit-test/repo])
+if test "${nl_with_nlunit_test}" = "internal"; then
+    AC_CONFIG_SUBDIRS([third_party/nlunit-test/repo])
+fi
 
 #
 # Identify the various makefiles and auto-generated files for the package
