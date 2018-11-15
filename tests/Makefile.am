@@ -277,10 +277,10 @@ NLASSERT_COVERAGE_INFO                                        = ${NLASSERT_COVER
 $(NLASSERT_COVERAGE_BUNDLE):
 	$(call create-directory)
 
-$(NLASSERT_COVERAGE_INFO): check | $(NLASSERT_COVERAGE_BUNDLE)
+$(NLASSERT_COVERAGE_INFO): check-local | $(NLASSERT_COVERAGE_BUNDLE)
 	$(call generate-coverage-report,${top_builddir})
 
-coverage: $(NLASSERT_COVERAGE_INFO)
+coverage-local: $(NLASSERT_COVERAGE_INFO)
 
 clean-local: clean-local-coverage
 
