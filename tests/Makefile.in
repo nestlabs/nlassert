@@ -821,6 +821,18 @@ localedir = @localedir@
 localstatedir = @localstatedir@
 mandir = @mandir@
 mkdir_p = @mkdir_p@
+nl_filtered_build = @nl_filtered_build@
+nl_filtered_build_cpu = @nl_filtered_build_cpu@
+nl_filtered_build_os = @nl_filtered_build_os@
+nl_filtered_build_vendor = @nl_filtered_build_vendor@
+nl_filtered_host = @nl_filtered_host@
+nl_filtered_host_cpu = @nl_filtered_host_cpu@
+nl_filtered_host_os = @nl_filtered_host_os@
+nl_filtered_host_vendor = @nl_filtered_host_vendor@
+nl_filtered_target = @nl_filtered_target@
+nl_filtered_target_cpu = @nl_filtered_target_cpu@
+nl_filtered_target_os = @nl_filtered_target_os@
+nl_filtered_target_vendor = @nl_filtered_target_vendor@
 nlbuild_autotools_stem = @nlbuild_autotools_stem@
 oldincludedir = @oldincludedir@
 pdfdir = @pdfdir@
@@ -2202,10 +2214,10 @@ include $(abs_top_nlbuild_autotools_dir)/automake/pre.am
 @NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@$(NLASSERT_COVERAGE_BUNDLE):
 @NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@	$(call create-directory)
 
-@NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@$(NLASSERT_COVERAGE_INFO): check | $(NLASSERT_COVERAGE_BUNDLE)
+@NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@$(NLASSERT_COVERAGE_INFO): check-local | $(NLASSERT_COVERAGE_BUNDLE)
 @NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@	$(call generate-coverage-report,${top_builddir})
 
-@NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@coverage: $(NLASSERT_COVERAGE_INFO)
+@NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@coverage-local: $(NLASSERT_COVERAGE_INFO)
 
 @NLASSERT_BUILD_COVERAGE_REPORTS_TRUE@@NLASSERT_BUILD_COVERAGE_TRUE@@NLASSERT_BUILD_TESTS_TRUE@clean-local: clean-local-coverage
 
