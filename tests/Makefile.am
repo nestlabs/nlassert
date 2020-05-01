@@ -1,4 +1,5 @@
 #
+#    Copyright (c) 2020 Project nlassert Authors
 #    Copyright (c) 2016-2017 Nest Labs, Inc.
 #    All rights reserved.
 #
@@ -262,6 +263,14 @@ nlassert_test_production_abort_backtrace_log_SOURCES          = $(COMMON_SOURCES
 nlassert_test_production_abort_backtrace_trap_SOURCES         = $(COMMON_SOURCES)
 nlassert_test_production_abort_log_trap_SOURCES               = $(COMMON_SOURCES)
 nlassert_test_production_abort_backtrace_log_trap_SOURCES     = $(COMMON_SOURCES)
+
+#
+# Foreign make dependencies
+#
+
+NLFOREIGN_SUBDIR_DEPENDENCIES                         = \
+   $(NLUNIT_TEST_FOREIGN_SUBDIR_DEPENDENCY)             \
+   $(NULL)
 
 if NLASSERT_BUILD_COVERAGE
 CLEANFILES                                                    = $(wildcard *.gcda *.gcno)

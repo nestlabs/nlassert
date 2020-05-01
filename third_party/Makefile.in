@@ -15,6 +15,7 @@
 @SET_MAKE@
 
 #
+#    Copyright 2020 Project nlassert Authors. All Rights Reserved.
 #    Copyright 2015-2018 Nest Labs Inc. All Rights Reserved.
 #
 #    Licensed under the Apache License, Version 2.0 (the "License");
@@ -267,6 +268,7 @@ MAKEINFO = @MAKEINFO@
 MANIFEST_TOOL = @MANIFEST_TOOL@
 MKDIR_P = @MKDIR_P@
 NLUNIT_TEST_CPPFLAGS = @NLUNIT_TEST_CPPFLAGS@
+NLUNIT_TEST_FOREIGN_SUBDIR_DEPENDENCY = @NLUNIT_TEST_FOREIGN_SUBDIR_DEPENDENCY@
 NLUNIT_TEST_LDFLAGS = @NLUNIT_TEST_LDFLAGS@
 NLUNIT_TEST_LIBS = @NLUNIT_TEST_LIBS@
 NLUNIT_TEST_SUBDIRS = @NLUNIT_TEST_SUBDIRS@
@@ -372,11 +374,7 @@ DIST_SUBDIRS = \
 
 
 # Always build (e.g. for 'make all') these subdirectories.
-#
-# The value of NLUNIT_TEST_SUBDIRS will be populated by configure if
-# --with-nlunit_test=internal
 SUBDIRS = \
-    $(NLUNIT_TEST_SUBDIRS)          \
     $(NULL)
 
 all: all-recursive
